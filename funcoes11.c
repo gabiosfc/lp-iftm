@@ -1,21 +1,21 @@
 #include <stdio.h>
 
-void divisoresDeN(){
-    int n, cont;
+void divisoresDeN(int n){
 
-    scanf("%d", &n);
-
-    for (int i = 0; i <= n; i++){
-        cont = i + 1;
-        if (n % cont == 0){
-            printf("%d\n", cont);
+    for (int i = 1; i <= n; i++){
+        if (n % i == 0){
+            printf("%d\n", i);
         }
     }
 }
 
 int main () {
 
-    divisoresDeN();
+    int n;
+
+    scanf("%d", &n);
+
+    divisoresDeN(n);
 
     return 0;
 }
