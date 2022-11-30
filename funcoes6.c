@@ -1,23 +1,22 @@
 #include<stdio.h>
 
-int identificaForma(){
-    int base, altura;
-
-    scanf("%d %d", &base, &altura);
+int identificaForma(int base, int altura){
 
     if(base == altura){
         return 1;
-    }else {
-        return 0;
     }
-
+    return 0;
 }
 
 
 int main (){
 
+    int base, altura;
+
+    scanf("%d %d", &base, &altura);
+
     int resultado;
-    resultado = identificaForma();
+    resultado = identificaForma(base, altura);
 
     printf("%d\n", resultado);
     return 0;
