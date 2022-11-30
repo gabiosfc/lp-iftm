@@ -1,28 +1,27 @@
 #include<stdio.h>
 
 
-int somaMaiorEMenor(){
-    int a, b, c, maior, menor;
+int somaMaiorEMenor(int a, int b, int c){
 
-    scanf("%d %d %d", &a, &b, &c);
+    int maior, menor;
 
-    if(a > b && a > c){
+    if(a >= b && a >= c){
         maior = a;
-        if(b < c){
+        if(b <= c){
             menor = b;
         } else {
             menor = c;
         }
-    } else if (b > a && b > c){
+    } else if (b >= a && b >= c){
         maior = b;
-        if(a < c){
+        if(a <= c){
             menor = a;
         } else {
             menor = c;
         }
-    } else if (c > a && c > b){
+    } else if (c >= a && c >= b){
         maior = c;
-        if(a < b){
+        if(a <= b){
             menor = a;
         } else {
             menor = b;
@@ -35,8 +34,13 @@ int somaMaiorEMenor(){
 
 int main (){
 
+    int a, b, c;
+
+    scanf("%d %d %d", &a, &b, &c);
+
+
     int soma;
-    soma = somaMaiorEMenor();
+    soma = somaMaiorEMenor(a, b, c);
 
     printf("%d\n", soma);
     return 0;
