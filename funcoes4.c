@@ -1,11 +1,9 @@
 #include<stdio.h>
 
 
-int identificaPares(){
+int identificaPares(int a, int b, int c){
     int cont = 0;
-    int a, b, c;
 
-    scanf("%d %d %d", &a, &b, &c);
 
     if(a % 2 == 0){
         cont++;
@@ -23,8 +21,13 @@ int identificaPares(){
 
 int main (){
 
+    int a, b, c;
+
+    scanf("%d %d %d", &a, &b, &c);
+
     int quantidadePares;
-    quantidadePares = identificaPares();
+
+    quantidadePares = identificaPares(a, b, c);
 
     printf("%d\n", quantidadePares);
     return 0;
